@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #03afac;
+        }
+
+        div.con {
+            width: 100px;
+            height: 100px;
+            margin: 250px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective-origin: 0px 0px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+
+            position: relative;
+            transform-style: preserve-3d;
+            perspective-origin: 0px 0px;
+            animation: circle 2s linear infinite forwards;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #036663;
+            position: absolute;
+        }
+
+        .circle2 {
+            background-color: red;
+            transform: rotateY(30deg);
+        }
+
+        .circle3 {
+            background-color: orange;
+            transform: rotateY(60deg);
+        }
+
+        .circle4 {
+            background-color: blue;
+            transform: rotateY(90deg);
+        }
+
+        .circle5 {
+            background-color: blueviolet;
+            transform: rotateY(120deg);
+        }
+
+        .circle6 {
+            background-color: aquamarine;
+            transform: rotateY(150deg);
+        }
+
+        .circle21 {
+            background-color: red;
+            transform: rotateX(30deg);
+        }
+
+        .circle22 {
+            background-color: orange;
+            transform: rotateX(60deg);
+        }
+
+        .circle23 {
+            background-color: blue;
+            transform: rotateX(90deg);
+        }
+
+        .circle24 {
+            background-color: blueviolet;
+            transform: rotateX(120deg);
+        }
+
+        .circle25 {
+            background-color: aquamarine;
+            transform: rotateX(150deg);
+        }
+
+        .circle26 {
+            background-color: #DDB321;
+            transform: rotateX(150deg);
+        }
+
+        .circle31 {
+            background-color: red;
+            transform: rotateZ(30deg);
+        }
+
+        .circle32 {
+            background-color: orange;
+            transform: rotateZ(60deg);
+        }
+
+        .circle33 {
+            background-color: blue;
+            transform: rotateZ(90deg);
+        }
+
+        .circle34 {
+            background-color: blueviolet;
+            transform: rotateZ(120deg);
+        }
+
+        .circle35 {
+            background-color: aquamarine;
+            transform: rotateZ(150deg);
+        }
+
+        .circle36 {
+            background-color: royalblue;
+            transform: rotateZ(150deg);
+        }
+
+        @keyframes circle {
+            from {
+                transform: rotate3d(1, 1, 1, 360deg);
+            }
+            to {
+                transform: rotate3d(1, 1, 1, -360deg);
+            }
+        }
+
+        ul {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            border-radius: 10px;
+            border: solid #296f53 1px;
+            background-color: #ddd;
+            opacity: 0.8;
+        }
+
+        li {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: #666;
+            list-style: none;
+        }
+
+        ul:nth-of-type(1) {
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul:nth-of-type(1) li {
+            width: 35px;
+            height: 35px;
+        }
+
+        ul:nth-of-type(2) {
+            justify-content: space-around;
+        }
+
+        ul:nth-of-type(2) li:nth-of-type(1) {
+            margin: 12px 0 0 12px;
+            align-self: flex-start;
+        }
+
+        ul:nth-of-type(2) li:nth-of-type(2) {
+            align-self: flex-end;
+            margin: 0 12px 12px 0;
+        }
+
+        ul:nth-of-type(3) {
+            justify-content: space-around;
+        }
+
+        ul:nth-of-type(3) li {
+        }
+
+        ul:nth-of-type(3) li:nth-of-type(1) {
+            margin: 10px 0 0 10px;
+            align-self: flex-start;
+        }
+
+        ul:nth-of-type(3) li:nth-of-type(2) {
+            margin: 0;
+            align-self: center;
+        }
+
+        ul:nth-of-type(3) li:nth-of-type(3) {
+            margin: 0 10px 10px 0;
+            align-self: flex-end;
+        }
+
+        ul:nth-of-type(4) {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        ul:nth-of-type(4) li {
+            margin: 12px;
+        }
+
+        ul:nth-of-type(5) {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        ul:nth-of-type(5) li:nth-of-type(1), ul:nth-of-type(5) li:nth-of-type(2) {
+            margin: 10px 5px 0 5px;
+        }
+
+        ul:nth-of-type(5) li:nth-of-type(4), ul:nth-of-type(5) li:nth-of-type(5) {
+            margin: 0 5px 5px 5px;
+        }
+
+        ul:nth-of-type(5) li:nth-of-type(3) {
+            margin: 0 30px;
+        }
+
+        ul:nth-of-type(6) {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        ul:nth-of-type(6) li {
+            margin: 5px;
+        }
+
+        ul:nth-of-type(6) li:nth-of-type(3), ul:nth-of-type(6) li:nth-of-type(4) {
+            margin: 0 5px;
+        }
+
+        /*设置3d视角*/
+        ul:nth-of-type(1) {
+            transform: translateZ(50px);
+        }
+
+        ul:nth-of-type(6) {
+            transform: translateZ(-50px) rotateY(180deg);
+        }
+
+        ul:nth-of-type(2) {
+            transform: translateX(50px) rotateY(90deg);
+        }
+
+        ul:nth-of-type(5) {
+            transform: translateX(-50px) rotateY(-90deg);
+        }
+
+        ul:nth-of-type(3) {
+            transform: translateY(50px) rotateX(-90deg);
+        }
+
+        ul:nth-of-type(4) {
+            transform: translateY(-50px) rotateX(-90deg);
+        }
+
+        div.con {
+            animation: saizi 2s linear infinite forwards;
+        }
+
+        @keyframes saizi {
+            from {
+                transform: rotate3d(0, 1, 1, 0deg)
+            }
+            to {
+                transform: rotate3d(0, 1, 1, 360deg)
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <ul>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="box">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+        <div class="circle circle6"></div>
+        <div class="circle circle21"></div>
+        <div class="circle circle22"></div>
+        <div class="circle circle23"></div>
+        <div class="circle circle24"></div>
+        <div class="circle circle25"></div>
+        <div class="circle circle26"></div>
+        <div class="circle circle31"></div>
+        <div class="circle circle32"></div>
+        <div class="circle circle33"></div>
+        <div class="circle circle34"></div>
+        <div class="circle circle35"></div>
+        <div class="circle circle36"></div>
+    </div>
+</div>
+</body>
+</html>

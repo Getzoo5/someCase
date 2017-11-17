@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 100%;
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective-origin: 0px 0px;
+        }
+
+        .box li {
+            width: 100px;
+            height: 50px;
+            position: relative;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+            list-style: none;
+            transform-style: preserve-3d;
+            perspective-origin: 0px 0px;
+            transform: translate3d(0, -25px, 25px)
+        }
+
+        .box li > div {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .front {
+            background-color: dodgerblue;
+        }
+
+        .top {
+            transform: translate3d(0, -25px, 25px) rotate3d(1, 0, 0, 270deg);
+            background-color: orange;
+        }
+
+        li {
+            transform: rotate3d(1, 0, 0, 0deg);
+            transition: all 1s;
+        }
+
+        li:hover {
+            transform: rotate3d(1, 0, 0, 90deg);
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li>
+        <div class="front">前端</div>
+        <div class="top">前端</div>
+    </li>
+    <li>
+        <div class="front">web</div>
+        <div class="top">web</div>
+    </li>
+    <li>
+        <div class="front">移动</div>
+        <div class="top">移动</div>
+    </li>
+</ul>
+</body>
+</html>
