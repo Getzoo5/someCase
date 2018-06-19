@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/about/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#efefef",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "豆瓣 数据测试",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "发 现",
+        "iconPath": "/assets/icon/discover.png",
+        "selectedIconPath": "/assets/icon/discover_active.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "电 影",
+        "iconPath": "/assets/icon/movie.png",
+        "selectedIconPath": "/assets/icon/movie_active.png"
+      }
+    ],
+    "color": "#aaaaaa",
+    "selectedColor": "#6AA4A6"
+  }
+}

@@ -1,0 +1,34 @@
+<view>
+    <!-- wxp template -->
+    <swiper indicator-dots="true" autoplay="true">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" mode="center" class="slide-image">
+                </image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <wxc-tab bind:tabchange="onClick" default-index="{{0}}" component-id="c2" animate="{{true}}" text-color="#808081" active-text-color="#394D5A" active-line-color="#394D5A" class="descover-tab" _pid="{{_pid}}">
+        <wxc-tab-panel wx:for="{{tabs}}" wx:for-item="tab" wx:key="{{tab.content}}" tab-index="{{index}}" component-id="c2" label="{{tab.title}}" _pid="{{_pid}}">
+
+            <wxc-flex class="wrap book" wx:if="{{tab.id==0}}" cross="top" wrap="wrap" _pid="{{_pid}}">
+                <view class="item" wx:for="{{itemList}}">
+                    <image mode="widthFix" class="movie-img" src="../../assets/img/p17525.jpg"></image>
+                    <wxc-elip line="1" class="movie-title">《肖申克的救赎》</wxc-elip>
+                </view>
+            </wxc-flex>
+            <wxc-flex class="wrap movie" wx:if="{{tab.id==1}}" cross="top" wrap="wrap" _pid="{{_pid}}">
+                <view class="item" wx:for="{{itemList}}">
+                    <image mode="widthFix" class="movie-img" src="../../assets/img/p480747492.jpg"></image>
+                    <wxc-elip line="1" class="movie-title">《肖申克的救赎》</wxc-elip>
+                </view>
+            </wxc-flex>
+
+            <wxc-flex class="wrap lll" wx:if="{{tab.id==2 || tab.id==4 || tab.id==6 || tab.id==8 || tab.id==3 || tab.id==5 || tab.id==7 || tab.id==9}}" wx:for="{{itemList}}" _pid="{{_pid}}">
+                <view class="item side"></view>
+                <view class="item main"></view>
+            </wxc-flex>
+        </wxc-tab-panel>
+
+    </wxc-tab>
+</view>
